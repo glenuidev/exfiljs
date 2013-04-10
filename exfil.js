@@ -54,7 +54,7 @@ http.get(jqInclude, function(res) {
 	// quit if jquery gets 404
 	if (res.statusCode == "404") {
 		reqBarf(res);
-		echo("can't start sniper service");
+		echo("can't start exfil service");
 		return;
 	};
 	res.setEncoding('utf8');
@@ -72,7 +72,7 @@ http.get(jqInclude, function(res) {
 });	 
 
 
-// start sniper server
+// start exfil server
 makeServer = function(){
 	http.createServer(function(request, response) {
 		// REQUEST
